@@ -12,6 +12,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: echo. > test.txt
-                  echo "Successfuly created new file"
-                  cat test.txt
+          script: |
+            echo "This is a test file" > test.txt
+            echo "Successfully created new file"
+            cat test.txt
